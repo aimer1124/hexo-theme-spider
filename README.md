@@ -2,8 +2,8 @@
 
 ### Version
 
-Python:2.7.16
-Scrapy:1.8.0
+- [Python](https://www.python.org/):2.7.16
+- [Scrapy](https://scrapy.org/):1.8.0
 
 ### Req
 
@@ -12,7 +12,7 @@ Scrapy:1.8.0
 
 ### Record
 
-- `scrapy crawl themes` 获取Theme的名称和URL
+- `1.3`：`scrapy crawl themes` 获取Theme的名称和URL
 
 ```
 2020-01-03 13:58:42 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: theme)
