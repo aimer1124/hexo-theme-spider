@@ -12,6 +12,14 @@
 
 ### Record
 
+- `1.4`:获取所有Theme数据
+
+```
+...
+2020-01-04 10:03:01 [themes] DEBUG: The theme's name is Laughing , watch is 7, star is 182 , fold is 29, the url is https://github.com/BoizZ/hexo-theme-laughing.
+...
+```
+
 - `1.3`：`scrapy crawl themes` 获取Theme的名称和URL
 
 ```
