@@ -10,9 +10,17 @@
 [https://github.com/aimer1124/hexo-theme-spider/projects/1](https://github.com/aimer1124/hexo-theme-spider/projects/1)
 
 
+### Command
+
+```
+scrapy crawl themes -o theme_data.csv
+```
+
 ### Record
 
 ##### `1.4`
+
+- 将数据内容保存为CSV格式，便于排序查看
 
 - 添加Travis集成功能，`.travis.yml`
 
