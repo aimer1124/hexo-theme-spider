@@ -14,6 +14,8 @@
 
 ##### `1.4`
 
+- 添加Travis集成功能，`.travis.yml`
+
 - 存储获取的数据至JSON文件中,`theme_data.json`
 
 ```python
