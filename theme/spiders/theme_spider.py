@@ -1,5 +1,7 @@
 import scrapy
 
+from theme.items import ThemeItem
+
 
 class ThemeSpider(scrapy.Spider):
     name = "themes"
@@ -20,8 +22,11 @@ class ThemeSpider(scrapy.Spider):
                 'url': theme_url})
 
     def parse_github(self, response, name, url):
+        item = ThemeItem()
         data = response.css(".social-count::attr(aria-label)").getall()
-        watch = data[0].split(' ')[0]
-        star = data[1].split(' ')[0]
-        folk = data[2].split(' ')[0]
-        self.log("The theme's name is %s , watch is %s, star is %s , fold is %s, the url is %s." % (name, watch, star, folk, url))
+        item['name'] = name
+        item['watch'] = data[0].split(' ')[0]
+        item['star'] = data[1].split(' ')[0]
+        item['folk'] = data[2].split(' ')[0]
+        item['url'] = url
+        yield item
