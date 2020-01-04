@@ -1,4 +1,4 @@
-# hexo-theme-spider
+# hexo-theme-spider [![Build Status](https://travis-ci.org/aimer1124/hexo-theme-spider.svg?branch=master)](https://travis-ci.org/aimer1124/hexo-theme-spider)
 
 ### Version
 
