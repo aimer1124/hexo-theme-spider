@@ -3,10 +3,25 @@ language: python
 python:
   - 2.7
 
+env:
+  - TIME=date +%F
+
+before_install:
+  - git config --global push.default matching
+  - git config --global user.name "aimer1124"
+  - git config --global user.email "380774061@qq.com"
+
 
 install:
   - pip install scrapy
 
-
 script:
-  - scrapy crawl themes -o theme_data.json
+  - cd data
+  - scrapy crawl themes -o ./data/theme_data$TIME.csv
+  - cd ..
+
+after_success:
+  - git init
+  - git add --all .
+  - git commit -m "Auto Builder From Travis"
+  - git push --quiet --force https://$DEPLOY_REPO@github.com/aimer1124/hexo-theme-spider master
