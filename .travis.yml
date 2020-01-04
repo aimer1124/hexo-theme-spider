@@ -13,9 +13,7 @@ install:
   - pip install scrapy
 
 script:
-  - cd data
-  - scrapy crawl themes -o ./data/theme_data.csv
-  - cd ..
+  - scrapy crawl themes -o theme_data.csv
 
 after_success:
   - git init
