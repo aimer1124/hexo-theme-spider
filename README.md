@@ -20,6 +20,8 @@ scrapy crawl themes -o theme_data.csv
 
 ##### `1.4`
 
+- 保存过程数据库`data`文件夹
+
 - 将数据内容保存为CSV格式，便于排序查看
 
 - 添加Travis集成功能，`.travis.yml`
