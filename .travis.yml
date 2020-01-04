@@ -13,12 +13,14 @@ install:
   - pip install scrapy
 
 script:
-  - cd data
-  - scrapy crawl themes -o ./data/theme_data.csv
-  - cd ..
+  - scrapy crawl themes -o theme_data.csv
 
 after_success:
   - git init
   - git add --all .
   - git commit -m "Auto Builder From Travis"
   - git push --quiet --force https://$GH_TOKEN@github.com/aimer1124/hexo-theme-spider master
+
+branches:
+  only:
+    - raw
