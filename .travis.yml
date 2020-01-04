@@ -3,9 +3,6 @@ language: python
 python:
   - 2.7
 
-env:
-  - TIME=date +%F
-
 before_install:
   - git config --global push.default matching
   - git config --global user.name "aimer1124"
@@ -17,7 +14,7 @@ install:
 
 script:
   - cd data
-  - scrapy crawl themes -o ./data/theme_data$TIME.csv
+  - scrapy crawl themes -o ./data/theme_data.csv
   - cd ..
 
 after_success:
