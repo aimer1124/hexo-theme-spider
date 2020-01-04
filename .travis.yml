@@ -21,4 +21,4 @@ after_success:
   - git init
   - git add --all .
   - git commit -m "Auto Builder From Travis"
-  - git push --quiet --force https://$DEPLOY_REPO@github.com/aimer1124/hexo-theme-spider master
+  - git push --quiet --force https://$GH_TOKEN@github.com/aimer1124/hexo-theme-spider master
